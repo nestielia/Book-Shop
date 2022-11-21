@@ -1,0 +1,74 @@
+:root {
+  --primaryColor: #5588a3;
+  --mainGrey: #e8e8e8;
+  --mainBlue: #00334e;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--mainBlue);
+  background: var(--primaryColor);
+  font-family: "Lato", sans-serif;
+  letter-spacing: var(--mainSpacing);
+}
+
+form {
+  text-align: center;
+  line-height: 30px;
+  height: 100%;
+  overflow: auto;
+  padding-top: 3rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+p {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.buttons {
+  padding: 2rem;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainBlue);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.btn:active {
+  background-color: var(--primaryColor);
+  color: var(--mainBlue);
+}
+
+#overlay {
+  width: 80%;
+  margin: 3% auto;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+}

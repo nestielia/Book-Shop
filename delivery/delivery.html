@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./delivery.css">
+  <title>Order Form</title>
+</head>
+<body>
+  <section id="overlay">
+    <form action="#" id="form" autocomplete="off" method="POST">
+      <h1>Order Form</h1>
+      <div>
+        <label for="name">Enter your name:</label>
+        <input id="name" name="name" type="text" required pattern="[A-Za-z]{4,}">
+      </div>
+      <div>
+        <label for="surname">Enter your surname:</label>
+        <input id="surname" name="surname" type="text" required pattern="[A-Za-z]{4,}">
+      </div>
+      <div>
+        <label for="date">Delivery date:</label>
+        <input id="date" name="date" type="date" required>
+      </div>
+      <div>
+        <p>Enter your address:</p>
+        <label for="text">Enter street:</label>
+          <input id="street" name="street" type="text" required pattern="[a-z0-5]{8,}">
+      </div>
+      <div>
+        <label for="house">House number:</label>
+          <input id="house" name="house" type="number" required min="1">
+      </div>
+      <div>
+        <label for="flat">Flat number:</label>
+        <input id="flat" name="flat" type="text" required minlength="5" maxlength="100">
+      </div>
+      <div>
+        <p>Choose payment method:</p>
+        <input type="radio" id="cash" name="payment" value="cash">
+          <label for="cash">Cash</label>
+        <input type="radio" id="card" name="payment" value="card" required>
+          <label for="card">Card</label>
+      </div>
+      <div>
+        <p>Choose 2 gifts: (optional)</p>
+        <label for="gift">Pack as a gift</label>
+          <input id="gift" name="gift" type="checkbox" value="gift">
+            <br>
+        <label for="postcard">Add postcard</label>
+          <input id="postcard" name="postcard" type="checkbox" value="postcard">
+            <br>
+        <label for="discount">Add 2% discount to the next order</label>
+          <input id="discount" name="discount" type="checkbox" value="discount">
+              <br>
+        <label for="pen">Add branded pen or pencil</label>
+          <input id="pen" name="pen" type="checkbox" value="pen">
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn">Confirm</button>
+        <button type="reset" class="btn">Cancel</button>
+      </div>
+    </form>
+  </section>
+<script src="./delivery.js"></script>
+</body>
+</html>
