@@ -1,0 +1,337 @@
+:root {
+  --primaryColor: #5588a3;
+  --mainGrey: #e8e8e8;
+  --mainBlue: #00334e;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--mainBlue);
+  background: var(--mainGrey);
+  font-family: "Lato", sans-serif;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--primaryColor);
+  z-index: 1;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+#bars_icon,
+#cart_icon {
+  height: 40%;
+  width: 40%;
+  position: relative;
+  cursor: pointer;
+}
+
+#hero {
+  min-height: calc(100vh - 60px);
+  background: url("./images/Bookshelf.png") center/cover no-repeat;
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 2rem;
+}
+
+#bannerTitle {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+
+#bannerBtn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainBlue);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+#bannerBtn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+#bannerBtn:active {
+  background-color: var(--primaryColor);
+  color: var(--mainBlue);
+}
+
+#books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#sectionTitle h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+#booksCenter {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.articleCard {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid var(--mainBlue);
+  border-radius: 10px;
+  letter-spacing: var(--mainSpacing);
+  box-shadow: 3px 3px 3px 3px var(--primaryColor);
+}
+
+.bookImage {
+  width: 15rem;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 5px 15px 10px 15px;
+}
+
+#bookTitle {
+  font: 3rem;
+}
+
+#bookAuthor {
+  font-size: 1rem;
+  padding: 0;
+}
+
+#bookPrice {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+.cartButton {
+  background-color: var(--primaryColor);
+  border: none;
+  border-radius: 3px;
+  color: var(--mainBlue);
+  padding: 8px 12px;
+  font-size: 1rem;
+  align-self: flex-start;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: var(--mainTransition);
+}
+
+#cartButton:hover {
+  background: transparent;
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+}
+
+#cartButton:active {
+  background-color: var(--primaryColor);
+  color: var(--mainBlue);
+}
+
+.showDescription {
+  cursor: pointer;
+  background-color: var(--mainGrey);
+  border: none;
+  color: var(--mainBlue);
+  padding: 2px 5px;
+  font-size: 16px;
+  align-self: flex-start;
+  transition: var(--mainTransition);
+}
+
+.descrContainer {
+  width: 500px;
+  height: 200px;
+  box-shadow: 3px 3px 10px -1px var(--primaryColor);
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  top: 350px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeDescription {
+  cursor: pointer;
+  background-color: var(--mainGrey);
+  border: 1px solid var(--mainBlue);
+  border-radius: 3px;
+  color: var(--mainBlue);
+  padding: 2px 5px;
+  font-size: 16px;
+  align-self: flex-start;
+  transition: var(--mainTransition);
+}
+
+.bookDescr {
+  font-size: 1rem;
+  padding: 2px 3px;
+  text-align: center;
+}
+
+/*
+#cart_content {
+  visibility: hidden;
+}
+*/
+.show_cart_content {
+  float: right;
+  max-height: 600px;
+  margin-right: 20px;
+  margin-top: 600px;
+  width: 630px;
+  background: var(--primaryColor);
+  color: var(--mainBlue);
+  padding: 20px;
+  visibility: visible;
+  overflow: scroll;
+}
+
+#cart_book_image img {
+  width: 100px;
+}
+
+/*#added_book {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}*/
+
+.added_book {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#cart_book_heading {
+  margin-left: 30px;
+  letter-spacing: var(--mainSpacing);
+}
+
+#cart_book_heading h3,
+h4 {
+  padding: 5px;
+}
+
+#cart_remove_btn {
+  background-color: var(--mainBlue);
+  border: none;
+  border-radius: 3px;
+  color: var(--mainGrey);
+  padding: 6px 10px;
+  font-size: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+
+#cart_confirm_btn {
+  background-color: var(--mainBlue);
+  border: none;
+  border-radius: 3px;
+  color: var(--mainGrey);
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: var(--mainTransition);
+  margin-top: 10px;
+}
+
+#cart_remove_btn:hover,
+#cart_confirm_btn:hover {
+  background: transparent;
+  color: var(--mainBlue);
+  border: 1px solid var(--mainBlue);
+}
+
+#cart_remove_btn:active,
+#cart_confirm_btn:active {
+  background-color: var(--mainBlue);
+  color: var(--mainGrey);
+}
+
+#cart_total_price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
+#cart_content h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.totalButton {
+  background-color: var(--mainBlue);
+  border: none;
+  border-radius: 3px;
+  color: var(--mainGrey);
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: var(--mainTransition);
+  margin-top: 10px;
+}
+
+.totalButton:hover {
+  background: transparent;
+  color: var(--mainBlue);
+  border: 1px solid var(--mainBlue);
+}
+
+.totalButton:active {
+  background-color: var(--mainBlue);
+  color: var(--mainGrey);
+}
